@@ -1,0 +1,5 @@
+2019-02-18 16:35:31,471 [nbody.py:25] [MainThread  ] [INFO ]  Elapsed time: 71.52641296386719
+2019-02-18 16:37:25,243 [nbody_1.py:25] [MainThread  ] [INFO ]  Elapsed time: 73.98425507545471
+2019-02-18 16:39:34,146 [nbody_2.py:25] [MainThread  ] [INFO ]  Elapsed time: 67.96941113471985
+2019-02-18 16:40:47,389 [nbody_2.py:25] [MainThread  ] [INFO ]  Elapsed time: 67.64657306671143
+2019-02-18 17:15:46,138 [nbody_3.py:25] [MainThread  ] [INFO ]  Elapsed time: 73.30084729194641
