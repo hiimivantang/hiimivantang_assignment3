@@ -1,3 +1,6 @@
+# LEAST IMPROVEMENT
+# 2019-02-18 21:11:29,536 [nbody_3.py:25] [MainThread  ] [INFO ]  Elapsed time: 65.13649606704712 
+
 """
     N-body simulation.
 """

@@ -1,3 +1,6 @@
+# SECOND MOST IMPROVEMENT
+# 2019-02-18 22:43:12,261 [nbody_4.py:25] [MainThread  ] [INFO ]  Elapsed time: 63.01941394805908 
+
 """
     N-body simulation.
 """
@@ -26,7 +29,6 @@ def timing(f):
         return result
 
     return wrapper
-
 
 
 PI = 3.14159265358979323
@@ -91,23 +93,26 @@ def update_rs(r, dt, vx, vy, vz):
     r[1] += dt * vy
     r[2] += dt * vz
 
-def advance(dt):
+def advance(loops, iterations, dt):
     '''
         advance the system one timestep
     '''
-    seenit = []
-    for body1 in BODIES.keys():
-        for body2 in BODIES.keys():
-            if (body1 != body2) and not (body2 in seenit):
-                ([x1, y1, z1], v1, m1) = BODIES[body1]
-                ([x2, y2, z2], v2, m2) = BODIES[body2]
-                (dx, dy, dz) = compute_deltas(x1, x2, y1, y2, z1, z2)
-                update_vs(v1, v2, dt, dx, dy, dz, m1, m2)
-                seenit.append(body1)
-        
-    for body in BODIES.keys():
-        (r, [vx, vy, vz], m) = BODIES[body]
-        update_rs(r, dt, vx, vy, vz)
+    for _ in range(loops):
+        for _ in range(iterations):
+            seenit = []
+            for body1 in BODIES.keys():
+                for body2 in BODIES.keys():
+                    if (body1 != body2) and not (body2 in seenit):
+                        ([x1, y1, z1], v1, m1) = BODIES[body1]
+                        ([x2, y2, z2], v2, m2) = BODIES[body2]
+                        (dx, dy, dz) = compute_deltas(x1, x2, y1, y2, z1, z2)
+                        update_vs(v1, v2, dt, dx, dy, dz, m1, m2)
+                        seenit.append(body1)
+                
+            for body in BODIES.keys():
+                (r, [vx, vy, vz], m) = BODIES[body]
+                update_rs(r, dt, vx, vy, vz)
+        print(report_energy())
 
 def compute_energy(m1, m2, dx, dy, dz):
     return (m1 * m2) / ((dx * dx + dy * dy + dz * dz) ** 0.5)
@@ -159,11 +164,7 @@ def nbody(loops, reference, iterations):
     # Set up global state
     offset_momentum(BODIES[reference])
 
-    for _ in range(loops):
-        report_energy()
-        for _ in range(iterations):
-            advance(0.01)
-        print(report_energy())
+    advance(loops, iterations, 0.01)
 
 if __name__ == '__main__':
     nbody(100, 'sun', 20000)

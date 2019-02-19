@@ -1,5 +1,7 @@
-2019-02-18 16:35:31,471 [nbody.py:25] [MainThread  ] [INFO ]  Elapsed time: 71.52641296386719
-2019-02-18 16:37:25,243 [nbody_1.py:25] [MainThread  ] [INFO ]  Elapsed time: 73.98425507545471
-2019-02-18 16:39:34,146 [nbody_2.py:25] [MainThread  ] [INFO ]  Elapsed time: 67.96941113471985
-2019-02-18 16:40:47,389 [nbody_2.py:25] [MainThread  ] [INFO ]  Elapsed time: 67.64657306671143
-2019-02-18 17:15:46,138 [nbody_3.py:25] [MainThread  ] [INFO ]  Elapsed time: 73.30084729194641
+2019-02-18 20:52:46,695 [nbody.py:25] [MainThread  ] [INFO ]  Elapsed time: 63.58893704414368
+2019-02-18 20:59:28,232 [nbody_1.py:25] [MainThread  ] [INFO ]  Elapsed time: 32.81942796707153
+2019-02-18 21:05:18,738 [nbody_1.py:25] [MainThread  ] [INFO ]  Elapsed time: 33.19482922554016
+2019-02-18 21:09:48,908 [nbody_2.py:25] [MainThread  ] [INFO ]  Elapsed time: 63.56575798988342
+2019-02-18 21:11:29,536 [nbody_3.py:25] [MainThread  ] [INFO ]  Elapsed time: 65.13649606704712
+2019-02-18 22:43:12,261 [nbody_4.py:25] [MainThread  ] [INFO ]  Elapsed time: 63.01941394805908
+2019-02-19 09:58:51,152 [nbody_opt.py:28] [MainThread  ] [INFO ]  Elapsed time: 33.283061027526855
